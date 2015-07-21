@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-kconfig"
-VERSION=5.10.0
+VERSION=5.12.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 configuration system libraries"
@@ -16,13 +16,13 @@ libKF5Config5_CONTENTS="
 	usr/bin/cygKF5ConfigCore-5.dll
 	usr/bin/cygKF5ConfigGui-5.dll
 	usr/bin/k*config5.exe
-	usr/libexec/kf5/
+	usr/libexec/kf5/kconf_update.exe
 	usr/share/doc/
 	usr/share/locale/
 "
 libKF5Config_devel_REQUIRES="libQt5Core-devel libQt5Gui-devel"
 libKF5Config_devel_CONTENTS="
-	usr/bin/kconfig_compiler_kf5.exe
+	usr/libexec/kf5/kconfig_compiler_kf5.exe
 	usr/include/KF5/KConfigCore/
 	usr/include/KF5/KConfigGui/
 	usr/include/KF5/kconfig_version.h
