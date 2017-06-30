@@ -1,7 +1,7 @@
-inherit kf5
+inherit kf5 python2 python3
 
 NAME="kf5-kconfig"
-VERSION=5.27.0
+VERSION=5.35.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 configuration system libraries"
@@ -11,7 +11,7 @@ way to hook widgets to the configuration so that they are automatically
 initialized from the configuration and automatically propagate their changes
 to their respective configuration files."
 
-PKG_NAMES="libKF5Config5 libKF5Config-devel"
+PKG_NAMES="libKF5Config5 libKF5Config-devel python2-pykf5-kconfig python3-pykf5-kconfig"
 libKF5Config5_CONTENTS="
 	usr/bin/cygKF5ConfigCore-5.dll
 	usr/bin/cygKF5ConfigGui-5.dll
@@ -31,4 +31,7 @@ libKF5Config_devel_CONTENTS="
 	${QT5_MKSPECSDIR#/}/modules/qt_KConfigGui.pri
 	usr/lib/libKF5ConfigCore.dll.a
 	usr/lib/libKF5ConfigGui.dll.a
+	usr/share/sip/PyKF5/KConfig*/
 "
+python2_pykf5_kconfig_CONTENTS="${PYTHON2_SITELIB#/}/PyKF5/KConfig*.dll"
+python3_pykf5_kconfig_CONTENTS="${PYTHON3_SITELIB#/}/PyKF5/KConfig*.dll"
